@@ -1,0 +1,11 @@
+START
+    input "guess a number between 1 and 100"
+    while guess is not correct
+        if guess is too high
+            output "guess is too high"
+        else
+            output "guess is too low"
+        endif
+    endwhile
+    output "player was correct!"
+END

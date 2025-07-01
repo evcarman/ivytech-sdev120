@@ -1,0 +1,43 @@
+START
+	DECLARATIONS
+	string customerLastName
+	num numOfBaths
+	num numOfOtherRooms
+	num serviceCharge
+	num Charge_base = 40
+	num charge_bath = 15
+	num charge_other_room = 10
+ 
+	string QUIT = "ZZZZ"
+	string name_prompt = "Please enter your last name: "
+	string bath_prompt = "Enter the number of bathrooms to be cleaned: "
+	string rooms_promt = "Enter the number of other rooms to be cleaned: "
+	string end_line = "Thank you for using the program"
+
+	housekeeping()
+	WHILE customerLastName <> QUIT
+	detailLoop()
+	ENDWHILE
+	endOfJob() 
+END
+
+housekeeping()
+	output name_prompt
+	input customerLastName
+return
+
+detailLoop()
+	output bath_prompt
+	input numOfBaths
+	output rooms_prompt
+	input numOfOtherRooms
+	serviceCharge = charge_base + (charge_bath * numOfBath) + (charge_room * numOfOtherRooms)
+ 
+	output serviceCharge
+	output name_prompt
+	input customerLastName
+return
+
+endOfJob()
+	output end_line
+return

@@ -1,0 +1,36 @@
+START
+	DECLARATIONS
+	num jobHours
+	num materialsCost
+	num laborCost = 30
+	num totalJobCost
+
+	string hours_prompt = "Please enter the numbers of hours for the job: "
+	string materials_prompt = "Enter the wholesale cost of materials: "
+	string end_line = "End of program"
+
+	housekeeping()
+	WHILE jobHours <> 0
+	detailLoop()
+	ENDWHILE
+	endOfJob() 
+END
+
+housekeeping()
+	output hours_prompt
+	input jobHours
+return
+
+detailLoop()
+	output materials_prompt
+	input materialsCost
+	totalJobCost = jobHours * laborCost + 1.2 * materialsCost
+	
+	output totalJobCost
+	output hours_prompt
+	input jobHours
+return
+
+endOfJob()
+	output end_line
+return

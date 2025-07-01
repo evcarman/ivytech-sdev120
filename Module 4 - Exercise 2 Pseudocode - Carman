@@ -1,0 +1,10 @@
+START
+	open dictionary
+	while word is not on the page
+		if word > last word on page
+			output "turn page forward"
+		else
+			output "turn page backward"
+		endif
+	endwhile
+END
